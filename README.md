@@ -57,27 +57,6 @@ The app will run locally at `http://localhost:3000`.
 
 ---
 
-## 📸 Screenshots
-
-> *(Add some screenshots or GIFs here if possible to show UI and trailer playback in action)*
-
----
-
-## 📁 Project Structure
-
-```plaintext
-src/
-├── components/
-│   └── AnimeTrailer.js      # Trailer component with YouTube integration
-├── pages/
-│   └── AnimeDetails.jsx     # Anime details page using Jikan API
-├── App.jsx                  # Main routes and layout
-├── index.js                 # Entry point
-.env                         # (not committed) contains API keys
-```
-
----
-
 ## 💠 Notes
 
 * This app uses the **YouTube Data API** to search trailers. Be aware of rate limits (10,000 units/day for free tier).
