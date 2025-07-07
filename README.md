@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# 🎮 Animax
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Animax is a React-based anime exploration app where users can view anime details and watch trailers directly via YouTube integration. It provides an elegant and responsive UI to browse anime and learn more about each series before watching.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+* 🔍 **Anime Search & Explore** – Search and explore anime details powered by the Jikan API.
+* 🎞️ **YouTube Trailers** – Automatically fetches the latest trailers based on the anime title.
+* 📱 **Responsive Design** – Works across desktops and mobile devices.
+* 💡 **Dynamic Trailer Component** – Automatically displays the most relevant trailer for each anime using the YouTube API.
+* ⚛️ Built with **React** using modern best practices (hooks, routing, clean UI).
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🧰 Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* **React**
+* **React Router DOM**
+* **YouTube Data API v3**
+* **Jikan API (Unofficial MyAnimeList API)**
+* **react-youtube** for embedded trailer playback
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🔧 Getting Started
 
-### `npm run build`
+### 1. Clone the repo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/yourusername/animax.git
+cd animax
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Install dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+### 3. Set up your `.env` file
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Create a `.env` file in the root directory and add your YouTube API key like so:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```env
+REACT_APP_YOUTUBE_API_KEY=your_youtube_api_key_here
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+> ⚠️ Make sure the key starts with `REACT_APP_` — this is required for Create React App (CRA) to expose the variable to the frontend.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 4. Start the development server
 
-## Learn More
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The app will run locally at `http://localhost:3000`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 📸 Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+> *(Add some screenshots or GIFs here if possible to show UI and trailer playback in action)*
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📁 Project Structure
 
-### Making a Progressive Web App
+```plaintext
+src/
+├── components/
+│   └── AnimeTrailer.js      # Trailer component with YouTube integration
+├── pages/
+│   └── AnimeDetails.jsx     # Anime details page using Jikan API
+├── App.jsx                  # Main routes and layout
+├── index.js                 # Entry point
+.env                         # (not committed) contains API keys
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 💠 Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* This app uses the **YouTube Data API** to search trailers. Be aware of rate limits (10,000 units/day for free tier).
+* You must **provide your own YouTube API key** via `.env`.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🧪 Future Enhancements
 
-### `npm run build` fails to minify
+* Add a watchlist feature
+* Enable direct streaming using third-party APIs
+* Improve trailer matching using video relevance filters
+* Add genres, filters, and trending sections
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to change.
+
+---
+
+## 🛡️ License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 💌 Acknowledgments
+
+* [Jikan API](https://jikan.moe/)
+* [YouTube Data API](https://developers.google.com/youtube/v3)
+* [react-youtube](https://github.com/tjallingt/react-youtube)
+
+---
